@@ -5,10 +5,14 @@
     <groupId>com.example</groupId>
     <artifactId>task-submissions</artifactId>
     <version>1.0-SNAPSHOT</version>
+    
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+    
     <build>
         <plugins>
             <!-- Compiler Plugin -->
@@ -26,6 +30,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.2.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>10.3.3</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation>
                     <encoding>UTF-8</encoding>
@@ -49,12 +60,19 @@
             </plugin>
         </plugins>
     </build>
+    
     <dependencies>
-        <!-- Add any project-specific dependencies here -->
+        <!-- JUnit 5 dependencies -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
