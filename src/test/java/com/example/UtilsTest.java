@@ -1,12 +1,15 @@
 package com.example;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import app.Utils;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UtilsTest {
+
     @Test
-    public void testAdd() {
-        Utils utils = new Utils();
-        assertEquals(5, utils.add(2, 3));
+    public void testAddNumbers() {
+        int result = Utils.addNumbers(5, 10);
+        assertEquals(15, result, "5 + 10 should equal 15");
     }
 }
