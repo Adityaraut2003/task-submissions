@@ -14,13 +14,13 @@
     </properties>
     
     <dependencies>
-        <!-- JUnit dependency -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
+    <!-- Other dependencies -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.9.3</version> <!-- Use the latest stable version -->
+        <scope>test</scope>
+    </dependency>
     </dependencies>
     
     <build>
